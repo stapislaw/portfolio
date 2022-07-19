@@ -1,0 +1,10 @@
+{
+  "short_name": "piluk_dev",
+  "name": "piluk_dev",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
