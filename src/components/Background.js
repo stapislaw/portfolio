@@ -52,15 +52,24 @@ const initBackground = (canvas, ctx) => {
     let time = 0.0;
     let shift = 0.0;
 
+    let startSpeed = 300.0;
+    const startTime = Date.now();
+    const slowTimeMs = 2000;
+    const timeA = (startSpeed + 1) / (slowTimeMs * slowTimeMs);
+
     const NUM_CYCLES = 10;
 
     const draw = () => {
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, width, height);
 
+        const currentTime = Date.now();
+        const timeX = Math.min(currentTime - startTime, slowTimeMs);
+        const speed = timeA * (timeX - slowTimeMs) * (timeX - slowTimeMs) + 1
+
         const angle = time + shift;
         for(let j = 0; j < NUM_CYCLES; j++) {
-            const alpha = Math.max(0, Math.sin(angle * 64 + j));
+            const alpha = 1 - (Math.max(0, Math.sin(angle * 64 + j)) * (10 / (speed)));
             ctx.fillStyle = "rgba(255, 255, 255," + alpha + ")";
             for(let i = 0; i < NUM_POINTS / NUM_CYCLES; i++) {
                 const x = points[j * NUM_POINTS / NUM_CYCLES + 2 * i];
@@ -70,7 +79,7 @@ const initBackground = (canvas, ctx) => {
                 ctx.fillRect(fx + max / 2, fy + max / 2, 1, 1);
             }
         }
-        time += 0.0002;
+        time += 0.0002 * speed;
         requestAnimationFrame(draw);
     }
     draw();

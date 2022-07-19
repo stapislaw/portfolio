@@ -31,21 +31,38 @@ export const Projects = () => {
         <Box id="projects">
             <Header>some projects of mine</Header>
             <Tiles>
-                <Tile src="./project.jpg" name="project #1" details={
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                } href=""></Tile>
-                <Tile src="./project2.jpg" name="project #2" details={
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                } href=""></Tile>
-                <Tile name="project #3" details={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id nibh sem. Etiam semper id neque eget consectetur. Maecenas sapien turpis, pharetra at lectus in, elementum cursus diam."
-                }/>
-                <Tile name="project #4" details={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id nibh sem. Etiam semper id neque eget consectetur. Maecenas sapien turpis, pharetra at lectus in, elementum cursus diam."
-                }/>
-                <Tile name="project #5" details={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id nibh sem. Etiam semper id neque eget consectetur. Maecenas sapien turpis, pharetra at lectus in, elementum cursus diam."
-                }/>
+                <Tile src="./rigmagic.jpg" name="rigmagic" details={
+                    `Standalone desktop application written using Electron. It allows to 
+                    create 2D sprite and skeletal animations. It is based on custom 
+                    animation engine and custom WebGL renderer.
+                    `
+                } tech={`
+                    technology: Typescript, Electron, React.js, custom WebGL renderer, styled-components
+                `} href="https://rigmagic.xyz"></Tile>
+                <Tile src="./rm-anim-viewer.jpg" name="rigmagic animation viewer" details={
+                    `A web app that allows loading and playback of animations 
+                    exported from rigmagic animations editor.
+                    `
+                } tech={
+                    `technology: JavaScript, React.js, pixi.js`
+                } href="https://stapislaw.github.io/rigmagic-animation-viewer/"></Tile>
+                <Tile src="./piluk_dev.jpg" name="piluk_dev" details={
+                    `Portfolio website written in React.js and styled-components.
+                    `
+                } tech={`
+                    technology: JavaScript, React.js, styled-components
+                `} href=""/>
+                <Tile src="./firu.png" name="firu" details={
+                    `A library that simplifies creating electron applications and gives 
+                    functions for easy inter-process communication. Available on 
+                    GitHub and npm.
+                    `
+                } href="https://github.com/stapislaw/firu"/>
+                <Tile src="./rm-anim-engine.jpg" name="rigmagic animation engine" details={
+                    `Typescript library that allows loading and playback animations 
+                    exported from rigmagic 2D animation editor.
+                    `
+                } href="https://github.com/stapislaw/rigmagic-animation-engine-ts"/>
             </Tiles>
         </Box>
     )

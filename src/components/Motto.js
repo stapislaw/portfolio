@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
-const msg = `motto\n   new line`;
+const msg = `JavaScript\n   developer`;
 
 const Paragraph = styled.p`
     font-size: 10vw;

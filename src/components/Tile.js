@@ -61,6 +61,12 @@ const DetailsP = styled.p`
     font-size: 18px;
 `;
 
+const TechP = styled.p`
+    padding: 1vw 1vw 0 1vw;
+    font-size: 18px;
+    margin: 0;
+`;
+
 const Link = styled.div`
     transition: transform 0.2s;
     padding: 1vw;
@@ -112,6 +118,7 @@ export function Tile(props) {
             <Title>{props.name}</Title>
             <Details>
                 <DetailsP>{props.details}</DetailsP>
+                <TechP>{props.tech}</TechP>
                 <Link>
                     <Anchor href={props.href}>go to project</Anchor>
                     <Arrow/>

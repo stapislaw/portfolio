@@ -64,8 +64,8 @@ export const Contacts = () => {
     return (
         <TitleBox title="contact" id="contact">
             <Icon src="./github.png" label="@stapislaw"></Icon>
-            <Icon src="./twitter.svg" label="twitter"></Icon>
-            <Icon src="./mail.svg" label="mail"></Icon>
+            <Icon src="./twitter.svg" label="@stapislaw"></Icon>
+            {/* <Icon src="./mail.svg" label="mail"></Icon> */}
         </TitleBox>
     );
 };

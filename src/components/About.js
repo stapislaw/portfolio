@@ -28,7 +28,9 @@ export const About = () => {
         <TitleBox title="about me" id="about">
             <Row>
                 <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {`
+                I'm a hobbyist programmer since 12 years old. During this time I learned and used many languages and technologies. Currently studying computer science on University of Warsaw and focusing on front-end development. Free time after studying I spend mostly creating my desktop Node. JS/ElectronJS application for 2D graphics animation - rigmagic.
+                `}
                 </Paragraph>
                 <Portrait src="./portrait.jpg"></Portrait>
             </Row>  
